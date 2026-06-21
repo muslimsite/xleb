@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Тёплый хлеб — хлеб на живой закваске, Москва</title>
+<meta name="description" content="Хлеб ручной работы на живой закваске. Печём каждое утро в Москве. Самовывоз и доставка такси. Можно собрать свой хлеб под себя.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600&family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="root">
+
+  <header id="header">
+    <a class="brand" data-action="goTop">
+      <span class="brand-mark">х</span>
+      <span class="brand-name">Тёплый <i>хлеб</i></span>
+    </a>
+    <nav class="nav">
+      <a data-action="navAssort">Ассортимент</a>
+      <a data-action="navBuild">Свой хлеб</a>
+      <a data-action="navWhy">Почему мы</a>
+      <a data-action="navHow">Как печём</a>
+      <a data-action="navDelivery">Доставка</a>
+    </nav>
+    <button class="cart-btn" data-cart-btn data-action="openDrawer" aria-label="Открыть корзину">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M6 6h15l-1.5 9h-12z"/><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M6 6 5 3H2"/></svg>
+      <span>Корзина</span>
+      <span class="cart-badge" data-cart-badge hidden>0</span>
+    </button>
+  </header>
+
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-veil hero-veil-1"></div>
+    <div class="hero-veil hero-veil-2"></div>
+    <div class="steam steam-1"></div>
+    <div class="steam steam-2"></div>
+    <div class="steam steam-3"></div>
+    <div class="hero-inner">
+      <div class="eyebrow" data-reveal>
+        <span class="eyebrow-line"></span>
+        <span class="eyebrow-text">Москва · на живой закваске</span>
+      </div>
+      <h1 class="hero-title" data-reveal data-reveal-delay="120">Хлеб, который<br>пахнет <i>домом</i></h1>
+      <p class="hero-lead" data-reveal data-reveal-delay="240">Печём каждое утро вручную. Без улучшителей, сухих дрожжей и спешки — только мука, вода, соль и 18 часов времени. Тот самый вкус, которого не бывает на полке за 50 ₽.</p>
+      <div class="hero-cta" data-reveal data-reveal-delay="360">
+        <button class="btn btn-gold" data-action="navAssort">Смотреть ассортимент</button>
+        <button class="btn btn-ghost btn-store" data-action="navWhy">
+          <span class="arrow">→</span>
+          <span>Лучше <b data-store-label>Пятёрочки?</b></span>
+        </button>
+        <span class="hero-note"><span class="dot"></span>Можно собрать свой хлеб</span>
+      </div>
+    </div>
+    <div class="scroll-hint"><span>листайте</span><span class="scroll-line"></span></div>
+  </section>
+
+  <div class="marquee">
+    <div class="marquee-track">
+      <span class="mq">на живой закваске</span><span class="mq-star">✦</span>
+      <span class="mq">без сухих дрожжей</span><span class="mq-star">✦</span>
+      <span class="mq">печём в Москве каждое утро</span><span class="mq-star">✦</span>
+      <span class="mq">только 4 ингредиента</span><span class="mq-star">✦</span>
+      <span class="mq">на живой закваске</span><span class="mq-star">✦</span>
+      <span class="mq">без сухих дрожжей</span><span class="mq-star">✦</span>
+      <span class="mq">печём в Москве каждое утро</span><span class="mq-star">✦</span>
+      <span class="mq">только 4 ингредиента</span><span class="mq-star">✦</span>
+    </div>
+  </div>
+
+  <section id="sec-why" class="section">
+    <div class="wrap">
+      <div class="head-center" data-reveal>
+        <span class="kicker">Честное сравнение</span>
+        <h2 class="h2">Лучше Пятёрочки,<br>Перекрёстка <i>и даже Азбуки</i></h2>
+      </div>
+      <div class="compare-grid">
+        <div class="compare-card" data-reveal>
+          <div class="compare-top">
+            <h3 class="compare-store">Пятёрочка / Перекрёсток /<br>Азбука вкуса</h3>
+            <span class="compare-price muted">50–200 ₽</span>
+          </div>
+          <p class="compare-sub">Один конвейер, разные ценники — состав тот же</p>
+          <ul class="compare-list">
+            <li><span class="x">✕</span>40+ ингредиентов, эмульгаторы и Е-добавки</li>
+            <li><span class="x">✕</span>Сухие дрожжи и разрыхлители вместо закваски</li>
+            <li><span class="x">✕</span>Маргарин и пальмовое масло</li>
+            <li><span class="x">✕</span>Черствеет «резиной», крошится</li>
+            <li><span class="x">✕</span>Тяжело усваивается, изжога</li>
+          </ul>
+        </div>
+        <div class="compare-card compare-card-home" data-reveal data-reveal-delay="140">
+          <span class="ribbon">НАШ ВЫБОР</span>
+          <div class="compare-top">
+            <h3 class="compare-store light">Домашний на закваске</h3>
+            <span class="compare-price gold">от 170 ₽</span>
+          </div>
+          <p class="compare-sub light">Ручная работа, маленькие партии, печём под заказ</p>
+          <ul class="compare-list light">
+            <li><span class="v">✓</span>Всего 4 ингредиента: мука, вода, соль, закваска</li>
+            <li><span class="v">✓</span>18 часов медленной ферментации</li>
+            <li><span class="v">✓</span>Хрустящая корка, влажный ароматный мякиш</li>
+            <li><span class="v">✓</span>Легче усваивается, ниже гликемический индекс</li>
+            <li><span class="v">✓</span>Запах, который наполняет весь дом</li>
+          </ul>
+        </div>
+      </div>
+      <div class="counters" data-reveal>
+        <div class="counter"><div class="counter-num" data-count="4" data-suffix="">4</div><div class="counter-label">ингредиента, и точка</div></div>
+        <div class="counter"><div class="counter-num" data-count="18" data-suffix=" ч">18 ч</div><div class="counter-label">ферментации теста</div></div>
+        <div class="counter"><div class="counter-num" data-count="0" data-suffix="">0</div><div class="counter-label">дрожжей и улучшителей</div></div>
+        <div class="counter"><div class="counter-num" data-count="100" data-suffix="%">100%</div><div class="counter-label">ручная работа</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sec-assort" class="section">
+    <div class="wrap">
+      <div class="head-center" data-reveal>
+        <span class="kicker">Ассортимент</span>
+        <h2 class="h2">Свежий хлеб каждый день</h2>
+        <p class="head-lead">Печём небольшими партиями под заказ. Добавляйте в корзину — соберём вместе.</p>
+      </div>
+      <div class="cards-grid" data-cards></div>
+    </div>
+  </section>
+
+  <!-- ===== CONSTRUCTOR: собери свой хлеб ===== -->
+  <section id="sec-build" class="section section-dark">
+    <div class="wrap wrap-narrow">
+      <div class="head-center" data-reveal>
+        <span class="kicker">Свой рецепт</span>
+        <h2 class="h2">Соберите <i>свой хлеб</i></h2>
+        <p class="head-lead">Не нашли нужное в ассортименте? Соберите хлеб под себя — выберите муку, добавки и размер. Цену рассчитаем индивидуально и сообщим, когда свяжемся с вами.</p>
+      </div>
+
+      <div class="builder" data-build data-reveal>
+        <!-- особый режим -->
+        <div class="build-block">
+          <div class="build-label"><span class="build-n">01</span>Особый режим</div>
+          <button type="button" class="gluten-toggle" data-gluten-toggle>
+            <span class="gluten-check">✓</span>
+            <span><b>Без глютена</b><i>на кукурузной / рисовой муке, для аллергиков и БГ-диеты</i></span>
+          </button>
+        </div>
+
+        <!-- мука -->
+        <div class="build-block" data-group="flour">
+          <div class="build-label"><span class="build-n">02</span>Мука <em>можно несколько</em></div>
+          <div class="chips">
+            <button type="button" class="chip" data-chip data-val="Пшеничная">Пшеничная</button>
+            <button type="button" class="chip" data-chip data-val="Ржаная">Ржаная</button>
+            <button type="button" class="chip" data-chip data-val="Цельнозерновая">Цельнозерновая</button>
+            <button type="button" class="chip" data-chip data-val="Кукурузная">Кукурузная</button>
+          </div>
+        </div>
+
+        <!-- добавки -->
+        <div class="build-block" data-group="addon">
+          <div class="build-label"><span class="build-n">03</span>Добавки <em>можно несколько</em></div>
+          <div class="chips">
+            <button type="button" class="chip" data-chip data-val="Семечки и семена">Семечки и семена</button>
+            <button type="button" class="chip" data-chip data-val="Орехи">Орехи</button>
+            <button type="button" class="chip" data-chip data-val="Сухофрукты">Сухофрукты</button>
+            <button type="button" class="chip" data-chip data-val="Специи и травы">Специи и травы</button>
+          </div>
+        </div>
+
+        <!-- размер -->
+        <div class="build-block" data-group="size">
+          <div class="build-label"><span class="build-n">04</span>Размер</div>
+          <div class="chips">
+            <button type="button" class="chip" data-chip data-single data-val="Маленький">Маленький</button>
+            <button type="button" class="chip" data-chip data-single data-val="Средний">Средний</button>
+            <button type="button" class="chip" data-chip data-single data-val="Большой">Большой</button>
+          </div>
+        </div>
+
+        <!-- пожелания -->
+        <div class="build-block">
+          <div class="build-label"><span class="build-n">05</span>Свои пожелания</div>
+          <textarea class="build-wishes" data-build-wishes rows="2" placeholder="Например: менее солёный, с хрустящей коркой, форма батоном…"></textarea>
+        </div>
+
+        <p class="form-error" data-build-error hidden></p>
+
+        <div class="build-foot">
+          <span class="build-foot-note">Цена — индивидуально, сообщим при подтверждении заказа</span>
+          <button type="button" class="btn btn-gold" data-build-add>Добавить в корзину →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sec-how" class="section section-dark">
+    <div class="wrap">
+      <div class="head-center" data-reveal>
+        <span class="kicker">Ремесло</span>
+        <h2 class="h2">Как рождается буханка</h2>
+      </div>
+      <div class="steps-grid">
+        <div class="step" data-reveal><div class="step-num">01</div><h3 class="step-title">Живая закваска</h3><p class="step-text">Нашей закваске не один год. Мы кормим её каждый день — она и поднимает тесто вместо дрожжей.</p></div>
+        <div class="step" data-reveal data-reveal-delay="120"><div class="step-num">02</div><h3 class="step-title">Долгое тесто</h3><p class="step-text">18 часов медленной ферментации в прохладе. Так раскрывается вкус и хлеб становится полезнее.</p></div>
+        <div class="step" data-reveal data-reveal-delay="240"><div class="step-num">03</div><h3 class="step-title">Печь на камне</h3><p class="step-text">Высокий жар и пар дают ту самую трескающуюся корку и ровный, ароматный мякиш.</p></div>
+        <div class="step" data-reveal data-reveal-delay="360"><div class="step-num">04</div><h3 class="step-title">Тёплым — к вам</h3><p class="step-text">Печём в день заказа и сразу отдаём на самовывоз или отправляем на такси по Москве.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sec-delivery" class="section section-grad">
+    <div class="wrap wrap-narrow">
+      <div class="head-center" data-reveal>
+        <span class="kicker">Москва</span>
+        <h2 class="h2">Как забрать хлеб</h2>
+      </div>
+      <div class="delivery-grid">
+        <div class="delivery-card" data-reveal>
+          <div class="delivery-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg></div>
+          <h3 class="delivery-title">Самовывоз</h3>
+          <p class="delivery-text">Заберите тёплый хлеб у нас в Москве. Напишем точный адрес и удобное время, как только испечём ваш заказ.</p>
+          <div class="delivery-meta">Бесплатно · по договорённости</div>
+        </div>
+        <div class="delivery-card delivery-card-hl" data-reveal data-reveal-delay="140">
+          <div class="delivery-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 13l2-6h14l2 6M5 13h14v4H5z"/><circle cx="8" cy="18" r="1.6"/><circle cx="16" cy="18" r="1.6"/></svg></div>
+          <h3 class="delivery-title">Доставка на такси</h3>
+          <p class="delivery-text">Привезём хлеб на такси по Москве в день выпечки — быстро и аккуратно. Стоимость поездки по тарифу такси.</p>
+          <div class="delivery-meta">По всей Москве · в день заказа</div>
+        </div>
+      </div>
+      <div class="delivery-cta" data-reveal>
+        <button class="btn btn-gold btn-lg" data-action="openDrawer">Собрать заказ →</button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="brand"><span class="brand-mark">х</span><span class="brand-name">Тёплый <i>хлеб</i></span></div>
+      <p class="footer-tag">Хлеб ручной работы на живой закваске. Печём каждое утро в Москве.</p>
+      <div class="footer-meta"><span>Самовывоз и доставка такси по Москве</span><span class="gold">Печём по будням и выходным</span></div>
+    </div>
+    <div class="footer-copy">© 2026 Тёплый хлеб · Москва</div>
+  </footer>
+
+  <div class="drawer-scrim" data-scrim data-action="closeDrawer"></div>
+  <aside class="drawer" data-drawer aria-label="Корзина">
+    <div class="drawer-head">
+      <div>
+        <h3 class="drawer-title">Ваш заказ</h3>
+        <span class="drawer-count" data-cart-count-label>пусто</span>
+      </div>
+      <button class="drawer-close" data-action="closeDrawer" aria-label="Закрыть">✕</button>
+    </div>
+
+    <div class="drawer-body" data-step-cart>
+      <div class="cart-empty" data-cart-empty>
+        <div class="cart-empty-emoji">🥖</div>
+        <p class="cart-empty-title">Корзина пока пуста</p>
+        <p class="cart-empty-sub">Добавьте свежий хлеб из ассортимента</p>
+      </div>
+      <div data-cart-lines></div>
+    </div>
+
+    <div class="drawer-body drawer-form" data-step-form hidden>
+      <button class="form-back" data-action="backToCart">← Назад к заказу</button>
+      <h4 class="form-h">Куда и кому печём</h4>
+      <label class="field">
+        <span class="field-label">Ваше имя</span>
+        <input type="text" data-field="name" placeholder="Как к вам обращаться" autocomplete="name">
+      </label>
+      <label class="field">
+        <span class="field-label">Телефон</span>
+        <input type="tel" data-field="phone" placeholder="+7 ___ ___-__-__" autocomplete="tel">
+      </label>
+      <div class="field">
+        <span class="field-label">Способ получения</span>
+        <div class="seg" data-seg>
+          <button type="button" class="seg-btn is-active" data-method="Самовывоз">Самовывоз</button>
+          <button type="button" class="seg-btn" data-method="Доставка такси">Доставка такси</button>
+        </div>
+      </div>
+      <label class="field" data-address-field hidden>
+        <span class="field-label">Адрес доставки</span>
+        <input type="text" data-field="address" placeholder="Улица, дом, квартира" autocomplete="street-address">
+      </label>
+      <label class="field">
+        <span class="field-label">Комментарий <i>(необязательно)</i></span>
+        <textarea data-field="comment" rows="2" placeholder="Удобное время, пожелания"></textarea>
+      </label>
+      <p class="form-error" data-form-error hidden></p>
+    </div>
+
+    <div class="drawer-foot">
+      <div class="sum-row"><span>Сумма</span><span data-subtotal>0 ₽</span></div>
+      <div class="sum-total"><span>Итого</span><span class="sum-total-val" data-total>0 ₽</span></div>
+      <button class="btn btn-gold btn-block" data-action="checkout" data-checkout-btn>Оформить заказ</button>
+      <p class="drawer-foot-note">Самовывоз или доставка на такси по Москве</p>
+    </div>
+  </aside>
+
+  <div class="toast" data-toast><span class="toast-check">✓</span><span data-toast-text></span></div>
+
+  <div class="success-scrim" data-success data-action="closeSuccess">
+    <div class="success-card" data-success-card>
+      <div class="success-emoji" data-success-emoji>🥐</div>
+      <h3 class="success-title" data-success-title>Заказ отправлен!</h3>
+      <p class="success-text" data-success-text></p>
+      <button class="btn btn-gold" data-action="closeSuccess">Отлично</button>
+    </div>
+  </div>
+
+</div>
+
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
