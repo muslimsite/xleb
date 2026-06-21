@@ -222,10 +222,28 @@ i{font-style:italic;}
 .success-title{font-family:'Playfair Display',serif;font-size:28px;color:#f6ecdb;margin:0 0 12px;}
 .success-text{color:#bca988;font-size:15px;line-height:1.6;margin:0 0 26px;}
 
+/* ===== burger + mobile menu ===== */
+.header-right{display:flex;align-items:center;gap:12px;}
+.burger{display:none;flex-direction:column;justify-content:center;gap:5px;width:42px;height:42px;border-radius:50%;border:1px solid rgba(214,178,120,.35);background:rgba(201,162,95,.12);cursor:pointer;padding:0;transition:background .2s ease;}
+.burger:hover{background:rgba(201,162,95,.22);}
+.burger span{display:block;width:18px;height:2px;margin:0 auto;background:#f6ecdb;border-radius:2px;transition:transform .3s cubic-bezier(.2,.7,.2,1),opacity .2s ease;}
+body.menu-open .burger span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+body.menu-open .burger span:nth-child(2){opacity:0;}
+body.menu-open .burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+.menu-scrim{position:fixed;inset:0;z-index:110;background:rgba(8,6,4,.5);opacity:0;pointer-events:none;transition:opacity .3s ease;}
+body.menu-open .menu-scrim{opacity:1;pointer-events:auto;}
+.mobile-menu{position:fixed;top:0;left:0;right:0;z-index:115;display:none;flex-direction:column;padding:84px clamp(18px,5vw,28px) 26px;background:rgba(20,15,10,.98);backdrop-filter:blur(14px);border-bottom:1px solid rgba(214,178,120,.18);box-shadow:0 24px 50px -24px rgba(0,0,0,.7);opacity:0;transform:translateY(-14px);pointer-events:none;transition:opacity .3s ease,transform .35s cubic-bezier(.2,.7,.2,1);}
+.mobile-menu a{color:#e6dcc9;font-family:'Playfair Display',serif;font-size:21px;padding:15px 4px;border-bottom:1px solid rgba(214,178,120,.1);cursor:pointer;text-decoration:none;transition:color .2s,padding-left .2s;}
+.mobile-menu a:last-child{border-bottom:none;}
+.mobile-menu a:hover{color:var(--gold);padding-left:10px;}
+body.menu-open .mobile-menu{opacity:1;transform:none;pointer-events:auto;}
+
 /* ===== responsive ===== */
 @media(max-width:760px){
   .nav{display:none;}
   .cart-btn span:not(.cart-badge){display:none;}
+  .burger{display:flex;}
+  .mobile-menu{display:flex;}
   .btn-store{min-width:0;}
   .hero-note{margin-left:0;}
   .footer-inner{flex-direction:column;text-align:center;}

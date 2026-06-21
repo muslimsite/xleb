@@ -363,6 +363,17 @@
   }
   function goTop(){ window.scrollTo({ top:0, behavior:'smooth' }); }
 
+  // ---------- мобильное меню (бургер) ----------
+  function setMenu(open){
+    document.body.classList.toggle('menu-open', open);
+    var b = $('[data-action="toggleMenu"]');
+    if(b) b.setAttribute('aria-expanded', open ? 'true' : 'false');
+    var m = $('[data-mobile-menu]');
+    if(m) m.setAttribute('aria-hidden', open ? 'false' : 'true');
+  }
+  function toggleMenu(){ setMenu(!document.body.classList.contains('menu-open')); }
+  function closeMenu(){ setMenu(false); }
+
   // ---------- конструктор «Собери свой хлеб» ----------
   function collectAndAddCustom(){
     var root = $('[data-build]');
@@ -403,7 +414,9 @@
     closeDrawer: closeDrawer,
     checkout: checkout,
     backToCart: function(){ setStep('cart'); },
-    closeSuccess: closeSuccess
+    closeSuccess: closeSuccess,
+    toggleMenu: toggleMenu,
+    closeMenu: closeMenu
   };
 
   // ---------- эффекты появления / счётчики / хедер / ротатор ----------
@@ -485,6 +498,8 @@
       if(act){
         var name = act.getAttribute('data-action');
         if(ACTIONS[name]) ACTIONS[name]();
+        // любой переход по меню (кроме самого тоггла) закрывает бургер
+        if(name!=='toggleMenu') closeMenu();
         return;
       }
     });
@@ -494,7 +509,7 @@
     });
     // не закрывать drawer при клике внутри
     $('[data-drawer]').addEventListener('click', function(e){ e.stopPropagation(); });
-    document.addEventListener('keydown', function(e){ if(e.key==='Escape'){ closeDrawer(); closeSuccess(); } });
+    document.addEventListener('keydown', function(e){ if(e.key==='Escape'){ closeDrawer(); closeSuccess(); closeMenu(); } });
   }
 
   // ---------- init ----------
