@@ -11,9 +11,9 @@
     { id:'kukuruznyy',  name:'Кукурузный хлеб',           price:270, weight:'≈ 600 г', tag:null,          img:'assets/kukuruznyy.png',  desc:'Лёгкая сладость и яркий аромат кукурузной муки.' },
     { id:'rzhanoy',     name:'Ржаной хлеб',               price:190, weight:'≈ 700 г', tag:null,          img:'assets/rzhanoy.png',     desc:'Плотный насыщенный вкус. Идеален для сытных блюд и закусок.' },
     { id:'borodinskiy', name:'Бородинский',               price:300, weight:'≈ 750 г', tag:'Классика',    img:'assets/borodinskiy.png', desc:'Тёмный хлеб с ароматом кориандра и лёгкой солодовой сладостью.' },
-    { id:'rukkola',     name:'Руккола-шпинат',            price:300, weight:'≈ 650 г', tag:'Новинка',     img:'assets/rukkola.png',     desc:'Зелёный хлеб с рукколой и шпинатом. Необычный вкус и польза.' },
+    { id:'rukkola',     name:'Руккола-шпинат',            price:350, weight:'≈ 650 г', tag:'Новинка',     img:'assets/rukkola.png',     desc:'Зелёный хлеб с рукколой и шпинатом. Необычный вкус и польза.' },
     { id:'kosichka',    name:'Косичка',                   price:170, weight:'≈ 400 г', tag:'Любят дети',  img:'assets/kosichka.png',    desc:'Французский дрожжевой хлеб-косичка. Золотистый и воздушный.' },
-    { id:'bezglyuten',  name:'Кукурузный безглютеновый',  price:300, weight:'≈ 600 г', tag:'Без глютена', img:'assets/hero_bread.jpg',  desc:'На кукурузной муке, без глютена. Хрустящая корка с надрезами, лёгкая сладость и аромат кукурузы — вкус без компромиссов.' }
+    { id:'bezglyuten',  name:'Кукурузный безглютеновый',  price:350, weight:'≈ 600 г', tag:'Без глютена', img:'assets/hero_bread.jpg',  desc:'На кукурузной муке, без глютена. Хрустящая корка с надрезами, лёгкая сладость и аромат кукурузы — вкус без компромиссов.' }
   ];
   var BY_ID = {};
   ITEMS.forEach(function(it){ BY_ID[it.id] = it; });
