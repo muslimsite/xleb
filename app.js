@@ -507,8 +507,6 @@
     $('[data-success-card]').addEventListener('click', function(e){
       if(!e.target.closest('[data-action="closeSuccess"]')) e.stopPropagation();
     });
-    // не закрывать drawer при клике внутри
-    $('[data-drawer]').addEventListener('click', function(e){ e.stopPropagation(); });
     document.addEventListener('keydown', function(e){ if(e.key==='Escape'){ closeDrawer(); closeSuccess(); closeMenu(); } });
   }
 
