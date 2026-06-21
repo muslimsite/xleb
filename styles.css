@@ -3,6 +3,7 @@
   --bg:#16100b;
 }
 *{box-sizing:border-box;-webkit-font-smoothing:antialiased;}
+[hidden]{display:none !important;}
 html{scroll-behavior:smooth;}
 body{margin:0;background:var(--bg);font-family:'Golos Text',system-ui,sans-serif;color:#efe4d3;}
 #root{position:relative;overflow-x:hidden;min-height:100vh;background:var(--bg);}
