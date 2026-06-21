@@ -266,12 +266,12 @@
 
     var text = buildMessage(form);
 
-    function done(ok){
+    function done(ok, detail){
       btn.disabled = false;
       btn.textContent = 'Отправить заказ';
       closeDrawer();
-      showSuccess(ok);
-      if(ok){ state.cart={}; state.custom=[]; renderCart(); }
+      showSuccess(ok, detail);
+      if(ok===true){ state.cart={}; state.custom=[]; renderCart(); }
     }
 
     if(!configured){
@@ -282,21 +282,24 @@
     }
 
     var url = 'https://api.telegram.org/bot'+token+'/sendMessage';
-    fetch(url, {
-      method:'POST',
-      headers:{'Content-Type':'application/json'},
-      body: JSON.stringify({ chat_id: chatId, text: text, parse_mode:'Markdown' })
-    })
+    // application/x-www-form-urlencoded — «простой» CORS-запрос без preflight,
+    // иначе браузер шлёт OPTIONS, который Telegram Bot API не обрабатывает.
+    var body = new URLSearchParams();
+    body.set('chat_id', chatId);
+    body.set('text', text);
+    body.set('parse_mode', 'Markdown');
+
+    fetch(url, { method:'POST', body: body })
     .then(function(r){ return r.json(); })
     .then(function(res){
       if(res && res.ok){ done(true); }
-      else { console.error('Telegram error:', res); done(false); }
+      else { console.error('Telegram error:', res); done(false, res && res.description); }
     })
     .catch(function(e){ console.error('Network error:', e); done(false); });
   }
 
   // ---------- success modal ----------
-  function showSuccess(kind){
+  function showSuccess(kind, detail){
     var scrim = $('[data-success]');
     var emoji = $('[data-success-emoji]');
     var title = $('[data-success-title]');
@@ -312,7 +315,9 @@
     } else {
       emoji.textContent='\u26a0\ufe0f';
       title.textContent='Не удалось отправить';
-      text.textContent='Что-то пошло не так при отправке. Проверьте интернет и попробуйте ещё раз, или напишите нам напрямую.';
+      text.textContent = detail
+        ? ('Telegram вернул ошибку: «'+detail+'». Проверьте BOT_TOKEN и CHAT_ID в config.js (бот должен быть в группе, chat_id группы — отрицательное число).')
+        : 'Что-то пошло не так при отправке. Проверьте интернет и попробуйте ещё раз, или напишите нам напрямую.';
     }
     scrim.classList.add('open');
   }
